@@ -23,6 +23,9 @@ https://templatemo.com/tm-532-next-level
     7 = 55
 */
 
+/*내맘대로*/
+.left_padding { padding-left: 40px;}
+
 /*	Overrides */
 
 html { scroll-behavior: smooth; }

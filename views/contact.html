@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Next Level - Contact</title>
+    <title>Medity</title>
 <!--
 Next Level CSS Template
 https://templatemo.com/tm-532-next-level
@@ -20,7 +20,7 @@ https://templatemo.com/tm-532-next-level
         <div class="col-lg-4 col-10">
           <div class="tm-brand-container">
             <div class="tm-brand-texts">
-              <h1 class="text-uppercase tm-brand-name">Next Level</h1>
+              <h1 class="text-uppercase tm-brand-name">Medity</h1>
             </div>
           </div>
         </div>
@@ -43,17 +43,13 @@ https://templatemo.com/tm-532-next-level
                     <div class="tm-nav-link-highlight"></div>
                     <a class="nav-link" href="main">Home</a>
                   </li>
-                  <li class="nav-item">
-                    <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="about"> About</a>
-                  </li>
-                  <li class="nav-item">
-                    <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="gallery">Gallery</a>
-                  </li>
                   <li class="nav-item active">
                     <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="contact">Contact <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="contact">Write <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="gallery">Purchase</a>
                   </li>
                 </ul>
               </div>
@@ -62,129 +58,62 @@ https://templatemo.com/tm-532-next-level
         </div>
       </div>
 
-      <div class="row tm-welcome-row">
-        <div class="col-12 tm-page-cols-container">
-          <div class="tm-page-col-left tm-welcome-box tm-bg-gradient">
-            <p class="tm-welcome-text">
-              <em
-                >"Gradient CSS BG #A0C0C0 to #669999 and right side is a
-                parallax image of our group."</em
-              >
-            </p>
-          </div>
-          <div class="tm-page-col-right">
-            <div
-              class="tm-welcome-parallax"
-              data-parallax="scroll"
-              data-image-src="img/contact-us.jpg"
-            ></div>
-          </div>
-        </div>
-      </div>
-
       <section class="row tm-pt-4 tm-mb-3">
         <div class="col-12 tm-page-cols-container">
-          <div class="tm-page-col-left">
-            <div class="tm-contact-container tm-mb-6">
-              <div class="tm-address-container">
-                <h2 class="tm-text-secondary tm-mb-6">Address</h2>
-                <address>
-                  <p>
-                    110-330 Sed ultricies purus nec<br />
-                    Suscipit vulputate<br />
-                    Fusce a massa 10550
-                  </p>
-                </address>
-              </div>
-
-              <div class="tm-location-container">
-                <h2 class="tm-text-secondary tm-mb-4">Location</h2>
-                <a href="#"><img src="img/map.png" alt="Map image" class="img-fluid" /></a>
-              </div>
-            </div>
-          </div>
           <div class="tm-page-col-right tm-form-container">
-            <h2 class="tm-text-secondary mb-4">Contact Us</h2>
+            <h2 class="tm-text-secondary mb-4 left_padding">진료 기록</h2>
             <form
               action="contact.html"
               method="POST"
               id="tm_contact_form"
               enctype="multipart/form-data">
+              <!-- <div class="form-group-2"> -->
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="contact_date"
+                  name="contact_date"
+                  class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
+                  placeholder="Date"
+                  required="" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="contact_hospital"
+                  name="contact_hospital"
+                  class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
+                  placeholder="Hospital"
+                  required="" />
+              </div>
               <div class="form-group">
                 <input
                   type="text"
                   id="contact_name"
                   name="contact_name"
                   class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
-                  placeholder="Your Name"
+                  placeholder="Name"
                   required="" />
               </div>
               <div class="form-group-2">
                 <input
-                  type="email"
-                  id="contact_email"
-                  name="contact_email"
+                  type="text"
+                  id="contact_disease"
+                  name="contact_disease"
                   class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
-                  placeholder="Your Email"
+                  placeholder="Disease"
                   required="" />
               </div>
-              <div class="form-group-2 input-field">
-                <select class="tm-select" name="occupation" id="occupation">
-                  <option value="select">Your Occupation</option>
-                  <option value="CE">Chief Executive</option>
-                  <option value="SA">Software Architect</option>
-                  <option value="PM">Project Manager</option>
-                  <option value="WD">Web Developer</option>
-                </select>
-              </div>
-              <div class="form-group tm-choices-container tm-text-secondary">
-                <label class="tm-w-50">
-                  <input
-                    type="radio"
-                    class="with-gap"
-                    name="gender"
-                    value="male" />
-                  <span>Male</span>
-                </label>
-
-                <label class="tm-w-50">
-                  <input
-                    type="radio"
-                    class="with-gap"
-                    name="gender"
-                    value="female" />
-                  <span>Female</span>
-                </label>
-              </div>
-
               <div class="tm-mb-5">
                 <textarea
                   rows="10"
-                  id="contact_message"
-                  name="contact_message"
+                  id="contact_detail"
+                  name="contact_detail"
                   class="form-control rounded-0"
-                  placeholder="Your Message"
+                  placeholder="detail.."
                   required=""></textarea>
               </div>
 
-              <div class="tm-mb-4 tm-choices-container tm-text-secondary">
-                <label class="tm-w-50">
-                  <input
-                    type="checkbox"
-                    name="ckb[]"
-                    class="filled-in"
-                    value="1" />
-                  <span>Check Box 1</span>
-                </label>
-                <label class="tm-w-50">
-                  <input
-                    type="checkbox"
-                    name="ckb[]"
-                    class="filled-in"
-                    value="2" />
-                  <span>Check Box 2</span>
-                </label>
-              </div>
               <div class="tm-mb-6 file-upload-container">
                 <input
                   id="file_name_label"
