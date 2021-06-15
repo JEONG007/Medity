@@ -47,7 +47,7 @@ module.exports = function (app) {
     res.render('contact.html');
   });
   app.get('/gallery', function (req, res) {
-    res.render('contact.html');
+    res.render('gallery.html');
   });
   app.get('/logout', function (req, res) {
     req.session.destroy(function (err) {
