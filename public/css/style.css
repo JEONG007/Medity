@@ -1,0 +1,23 @@
+table {
+    border-collapse: collapse;
+    border: 4px solid #bbb;
+    width: 50%;
+}
+
+tr:nth-child(even) {
+    background-color: #ccc
+}
+
+input,
+select {
+    padding: 6px 10px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: gold;
+}
