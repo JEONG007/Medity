@@ -24,23 +24,31 @@ module.exports = function (app) {
     if (!req.session.name)
       res.redirect('/login');
     else
-      res.redirect('/welcome');
+      res.redirect('/main');
   });
 
   app.get('/login', function (req, res) {
     if (!req.session.name)
       res.render('login', { message: 'input your id and password.' });
     else
-      res.redirect('/welcome');
+      res.redirect('/main');
   });
 
-  app.get('/welcome', function (req, res) {
+  app.get('/main', function (req, res) {
     if (!req.session.name)
       return res.redirect('/login');
     else
-      res.render('welcome', { name: req.session.name });
+      res.render('index.html', { name: req.session.name });
   });
-
+  app.get('/about', function (req, res) {
+    res.render('about.html');
+  });
+  app.get('/contact', function (req, res) {
+    res.render('contact.html');
+  });
+  app.get('/gallery', function (req, res) {
+    res.render('contact.html');
+  });
   app.get('/logout', function (req, res) {
     req.session.destroy(function (err) {
       res.redirect('/');
@@ -71,7 +79,7 @@ module.exports = function (app) {
       if (derivedKey.toString('hex') === pw) {
         req.session.name = id;
         req.session.save(function () {
-          return res.redirect('/welcome');
+          return res.redirect('/main');
         });
       }
       else {
