@@ -13,6 +13,12 @@ https://templatemo.com/tm-532-next-level
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/templatemo-style.css" />
+    
+    <script src="js/jquery.min.js"></script>
+    
+    <script src="js/sha256.min.js"></script>
+    <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+    <script src="js/argiculture.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -49,7 +55,7 @@ https://templatemo.com/tm-532-next-level
                   </li>
                   <li class="nav-item">
                     <div class="tm-nav-link-highlight"></div>
-                    <a class="nav-link" href="gallery">Purchase</a>
+                    <a class="nav-link" href="Gall_doc">Purchase</a>
                   </li>
                 </ul>
               </div>
@@ -62,49 +68,52 @@ https://templatemo.com/tm-532-next-level
         <div class="col-12 tm-page-cols-container">
           <div class="tm-page-col-right tm-form-container">
             <h2 class="tm-text-secondary mb-4 left_padding">진료 기록</h2>
-            <form
+            <!-- <form
               action="contact.html"
               method="POST"
               id="tm_contact_form"
-              enctype="multipart/form-data">
+              enctype="multipart/form-data"> -->
               <!-- <div class="form-group-2"> -->
+            <section id="viewSubmitDocument">
+              <!-- <form action="/upload" method="post"> -->
               <div class="form-group">
                 <input
                   type="text"
-                  id="contact_date"
-                  name="contact_date"
+                  id="pronumber"
+                  name="pronumber"
                   class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
-                  placeholder="Date"
+                  placeholder="고유번호"
                   required="" />
               </div>
               <div class="form-group">
                 <input
                   type="text"
-                  id="contact_hospital"
-                  name="contact_hospital"
+                  id="proloc"
+                  name="proloc"
                   class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
-                  placeholder="Hospital"
+                  placeholder="병명"
                   required="" />
               </div>
               <div class="form-group">
                 <input
                   type="text"
-                  id="contact_name"
-                  name="contact_name"
+                  id="prohospital"
+                  name="prohospital"
                   class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
-                  placeholder="Name"
+                  placeholder="병원"
                   required="" />
               </div>
               <div class="form-group-2">
                 <input
                   type="text"
-                  id="contact_disease"
-                  name="contact_disease"
+                  id="proname"
+                  name="proname"
                   class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
-                  placeholder="Disease"
+                  placeholder="이름"
                   required="" />
               </div>
-              <div class="tm-mb-5">
+              
+              <!-- <div class="tm-mb-5">
                 <textarea
                   rows="10"
                   id="contact_detail"
@@ -128,21 +137,22 @@ https://templatemo.com/tm-532-next-level
                     name="file_to_upload"
                     style="display: none;" />
                 </label>
-              </div>
+              </div> -->
 
               <div class="">
-                <button
+                <input type="button" id="itemUploadButton" class="btn btn-secondary tm-btn-submit rounded-0" value="submit">
+                <!-- <button
                   type="submit"
                   class="btn btn-secondary tm-btn-submit rounded-0">
                   Submit
-                </button>
+                </button> -->
               </div>
-            </form>
+              <!-- </form> -->
+            </section>
           </div>
         </div>
       </section>
-
-      <!-- Call to Action -->
+<!-- 
       <section class="row" id="tmCallToAction">
         <div class="col-12 tm-page-cols-container tm-call-to-action-col">
           <div class="tm-page-col-right">
@@ -173,12 +183,11 @@ https://templatemo.com/tm-532-next-level
           </div>
         </div>
       </section>
-      <!-- Page footer -->
       <footer class="row tm-page-footer">
         <p class="col-12 tm-copyright-text mb-0">
           Copyright &copy; 2019 Next Level Company... Designed by Template Mo
         </p>
-      </footer>
+      </footer> -->
     </div>
 
     <script src="js/jquery.min.js"></script>

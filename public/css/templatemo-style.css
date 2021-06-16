@@ -638,6 +638,10 @@ figure.effect-bubba:hover p {
 	width: 100%;
 	padding:40px;
 }
+#viewSubmitDocument {
+	width: auto;
+	padding:40px;
+}
 .form-group { margin-bottom: 35px; }
 .form-group-2 { margin-bottom: 65px; }
 
