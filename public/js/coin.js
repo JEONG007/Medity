@@ -326,6 +326,12 @@ $(document).ready(function() {
       document.getElementById('balance').innerText = result/1000000000000000000;
 
      });
+    $('#iceCoffee').click(function() {Transfer("iceCoffee")});
+    $('#hotCoffee').click(function() {Transfer("hotCoffee")});
+    $('#minCho').click(function() {Transfer("minCho")});
+    $('#earlGrey').click(function() {Transfer("earlGrey")});
+    $('#bananaCream').click(function() {Transfer("bananaCream")});
+    $('#milkTea').click(function() {Transfer("milkTea")});
      async function Transfer(item) {
         if (window.ethereum)
            try {
@@ -335,9 +341,11 @@ $(document).ready(function() {
            }
         if (typeof web3 === 'undefined')
            return showError("Please install MetaMask to access the Ethereum Web3 injected API from your Web browser.");
-        let price = $('#'+'item').val()
+        console.log(item);
+        let price = document.getElementById(item).value;
+        console.log(price);
         let contractcoin = web3.eth.contract(CoinRegistryContractABI).at(CoinRegistryContractAddress);
-        contractcoin.transfer('0x429f1D5aE2d81489dC16Ea507084d23D8e8AE9C3',10000000000000000000*price, function(err, result) {
+        contractcoin.transfer('0x429f1D5aE2d81489dC16Ea507084d23D8e8AE9C3',price, function(err, result) {
         if (err)
            return showError("Smart contract call failed: " + err);
           
