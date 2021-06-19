@@ -71,22 +71,24 @@ https://templatemo.com/tm-532-next-level
         </div>
       </div>
       <section id="viewSubmitDocument">
-        <!-- <form action="/addrsave" method="post">
-          <input type="text" id="CustomerAddress" style="width: 40%;" name="cus_addr" class="form-control rounded-0 border-top-0 border-right-0 border-left-0 mb-4" placeholder="환자 Address 입력" required="" />
-          <input type="submit" id="savebutton" class="btn btn-secondary tm-btn-submit rounded-0" value="환자 계정 저장" />
-        </form> -->
-        <h1 class="tm-text-secondary">환자 진료 기록</h1>
-        <p>병원 / 의사명 / 날짜</p>
-        
-        <br>
-        <form action="/addrsave" method="post">
-          <input value= <%= cus_name %> type="text" id="CustomerAddress" style="width: 40%;" class="form-control rounded-0 border-top-0 border-right-0 border-left-0 mb-4" required="" disabled/>
-          <input type="text" id="inputAddress" style="width: 40%;" name="cus_addr" class="form-control rounded-0 border-top-0 border-right-0 border-left-0 mb-4" placeholder="환자 Address 입력" required=""/>
-          <input type="submit" id="savebutton" class="btn btn-secondary tm-btn-submit rounded-0" value="Address Save" />
-          <input type="button" id="showTableButton" class="btn btn-secondary tm-btn-submit rounded-0" value="List Show" />
-        </form>
-        <br>
-        <div id="myTable"></div>
+        <div class="col-12 tm-page-col-center">
+          <!-- <form action="/addrsave" method="post">
+            <input type="text" id="CustomerAddress" style="width: 40%;" name="cus_addr" class="form-control rounded-0 border-top-0 border-right-0 border-left-0 mb-4" placeholder="환자 Address 입력" required="" />
+            <input type="submit" id="savebutton" class="btn btn-secondary tm-btn-submit rounded-0" value="환자 계정 저장" />
+          </form> -->
+          <h1 class="tm-text-secondary">환자 진료 기록</h1>
+          <p>병원 / 의사명 / 날짜</p>
+          
+          <br>
+          <form action="/addrsave" method="post">
+            <input value= <%= cus_name %> type="text" id="CustomerAddress" class="form-control rounded-0 border-top-0 border-right-0 border-left-0 mb-4" required="" disabled/>
+            <input type="text" id="inputAddress" name="cus_addr" class="form-control rounded-0 border-top-0 border-right-0 border-left-0 mb-4" placeholder="환자 Address 입력" required=""/>
+            <input type="submit" id="savebutton" class="btn btn-secondary tm-btn-submit rounded-0" value="Address Save" />
+            <input type="button" id="showTableButton" class="btn btn-secondary tm-btn-submit rounded-0" value="List Show" />
+          </form>
+          <br>
+          <div id="myTable"></div>
+        </div>
       </section>
 
      

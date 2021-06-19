@@ -435,7 +435,7 @@ $(document).ready(function() {
                      // cell4.style.width ="60%";
                      // cell4.innerHTML = timestamp;
       
-                     $('#myTable').append( '<tr><td>' + strArray[0] + ", "+ strArray[1] + ", "+ strArray[2] + ", "+ strArray[3] + ", "+strArray[4] + ", "+ timestamp  + '</td></tr>' );
+                     $('#myTable').append( '<tr><td>' + strArray[2] + ", "+ strArray[3] + ", "+strArray[4] + ", "+ timestamp  + '</td></tr>' );
       
                   })  // end of get
       

@@ -25,6 +25,11 @@ https://templatemo.com/tm-532-next-level
 
 /*내맘대로*/
 .left_padding { padding-left: 40px; padding-right: 40px;}
+.tm-page-col-login {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .tm-page-col-center {
   width: 50%;
   margin-left: auto;
