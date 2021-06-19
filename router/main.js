@@ -55,20 +55,33 @@ module.exports = function (app) {
   app.get('/main2', function (req, res) {
     if (!req.session.name)
       return res.redirect('/login');
+    else if(!req.session.cus_addr)
+      res.render('doctor', { name: req.session.name, cus_name: "아래에환자Address를입력해주세요" });
     else
-      res.render('doctor', { name: req.session.name });
+      res.render('doctor', { name: req.session.name, cus_name: req.session.cus_addr });
   });
+  // app.get('/addrsave', function (req, res) {
+  //   if (!req.session.name)
+  //     return res.redirect('/login');
+  //   else if(!req.session.cus_addr)
+  //     res.render('doctor', { name: req.session.name, cus_name: "환자Address입력" });
+  //   else
+  //     res.render('doctor', { name: req.session.name, cus_name: req.session.cus_addr });
+  // });
   app.get('/about', function (req, res) {
     res.render('about.html',{ name: req.session.name });
   });
   app.get('/contact', function (req, res) {
-    res.render('contact.html');
+    if(!req.session.cus_addr)
+      res.render('contact.html', { cus_name: "Home에서환자Address를저장해주세요" });
+    else
+      res.render('contact.html', { cus_name: req.session.cus_addr });
   });
   app.get('/Gall_doc', function (req, res) {
-    res.render('Gall_doc.html');
+    res.render('Gall_doc.html',{ name: req.session.name, cus_name: req.session.cus_addr });
   });
   app.get('/Gall_cus', function (req, res) {
-    res.render('Gall_cus.html');
+    res.render('Gall_cus.html',{ name: req.session.name });
   });
   app.get('/logout', function (req, res) {
     req.session.destroy(function (err) {
@@ -91,8 +104,7 @@ module.exports = function (app) {
   app.post('/main', function(req, res) { 
     let id = req.body.addr;
     req.session.name = id;
-    console.log("환자 버튼");
-    console.log(id);
+    console.log("환자 addr : ",id);
     req.session.save(function () {
       return res.redirect('/main');
     }); 
@@ -101,11 +113,22 @@ module.exports = function (app) {
   app.post('/main2', function(req, res) { 
     let id = req.body.addr;
     req.session.name = id;
-    console.log("의사 버튼");
-    console.log(id);
+    console.log("의사 addr : ", id);
     req.session.save(function () {
       return res.redirect('/main2');
     }); 
+  });
+  app.post('/addrsave', function(req, res) { 
+    let cus_addr = req.body.cus_addr;
+    req.session.cus_addr = cus_addr;
+    console.log("customer address(addrsave) : ", cus_addr);
+    // req.session.save();
+    req.session.save(function () {
+      return res.redirect('/main2');
+      
+    });
+    
+    // res.render('contact.html');
   });
 
   app.post('/login', function (req, res) {
