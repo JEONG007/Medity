@@ -3,82 +3,58 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Login Page</title>
-  <link rel='stylesheet' href='/css/login.css' type='text/css' />
+  <title>Medity</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css" />
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/sha256.min.js"></script>
+  <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+  <script src="js/argiculture.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
 <body>
-<!-- 
-  <h1> 로그인 </h1>
-  <h1><%= message %></h1>
-  <br> -->
-  <!-- <div>
-    <form action="/login" method="post">
-      <input id = "user" type="text" name="username" placeholder="id" /><br />
-      <input id = "pass" type="password" name="password" placeholder="password" /><br />
-      <input type="submit" />
-    </form>
-  </div> -->
+  <section class="row tm-pt-4 tm-mb-3">
+    <div class="col-12 tm-page-cols-container">
+      <div class="tm-page-col-center">
+        <h1 class="tm-text-secondary"> 로그인 </h1>
+        <br>
+        <div>
+            <!-- <label for="user" class="label">Address</label> -->
+            <input id = "user" class = "input form-control rounded-0 border-top-0 border-right-0 border-left-0" type="text" name="username" placeholder="Address" /><br />
+            <!-- <label for="pass" class="label">Password</label> -->
+            <input id = "pass" class = "input form-control rounded-0 border-top-0 border-right-0 border-left-0" type="password" name="password" placeholder="password" /><br />
+            <input id ="signin_button" type="submit" class="btn btn-secondary" value="Sign In">
+            <br />
+            <form action="/main" method="post">
+              <input id ="mainin_button_1" type="submit" name = "username" class="btn btn-secondary" style="display: none;" value="환자">
+              <input id = "mainin_text_1" type="text" name="addr">
+            </form><br />
+            <form action="/main2" method="post">
+              <input id ="mainin_button_2" type="submit" name = "username" class="btn btn-secondary" style="display: none;" value="의사">
+              <input id = "mainin_text_2" type="text" name="addr">
+            </form><br />
+        </div> 
 
+        <br />
 
-
-  <div class="login-wrap">
-    <div class="login-html">
-      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab my_left_padding">Sign In</label>
-      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-      <div class="login-form">
-        <div class="sign-in-htm">
-          <form action="/login" method="post">
-            <div class="group">
-              <label for="user" class="label">Address</label>
-              <input id = "user" class = "input" type="text" name="username" placeholder="Address" /><br />
-              <!-- <input id="user" type="text" class="input"> -->
-            </div>
-            <div class="group">
-              <label for="pass" class="label">Password</label>
-              <input id = "pass" class = "input" type="password" name="password" placeholder="password" /><br />
-              <!-- <input id="pass" type="password" class="input" data-type="password"> -->
-            </div>
-            <!-- <div class="group">
-              <input id="check" type="checkbox" class="check" checked>
-              <label for="check"><span class="icon"></span> Keep me Signed in</label>
-            </div> -->
-            <div class="group">
-              <input type="submit" class="button" value="Sign In">
-            </div>
-          </form>
-          <div class="hr"></div>
-          <div class="foot-lnk">
-            <a href="#forgot">Forgot Password?</a>
-          </div>
+        <h1 class="tm-text-secondary"> 회원가입 </h1>
+        <br>
+        <div>
+          <!-- <label for="user" class="label">Address</label> -->
+          <input id="user_sign" type="text" name="addr" class="input form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Address"><br />
+          <!-- <label for="pass" class="label">Password</label> -->
+          <input id="pass_sign" type="password" name="pw" class="input form-control rounded-0 border-top-0 border-right-0 border-left-0" data-type="password" placeholder="Password"><br />
+          <!-- <label for="pass" class="label">customer(1)/doctor(2)</label> -->
+          <input id="type_sign" type="number" name="type" class="input form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="customer(1)/doctor(2)"><br />
+          <input id ="signup_button" type="submit" class="btn btn-secondary" value="Sign Up">
         </div>
-        <div class="sign-up-htm">
-          <div class="group">
-            <label for="user" class="label">Address</label>
-            <input id="user" type="text" class="input" placeholder="Address">
-          </div>
-          <div class="group">
-            <label for="pass" class="label">Password</label>
-            <input id="pass" type="password" class="input" data-type="password" placeholder="Password">
-          </div>
-          <div class="group">
-            <label for="pass" class="label">Repeat Password</label>
-            <input id="pass" type="password" class="input" data-type="password" placeholder="password">
-          </div>
-          <div class="group">
-            <label for="pass" class="label">customer(1)/doctor(2)</label>
-            <input id="pass" type="number" class="input" placeholder="1 or 2">
-          </div>
-          <div class="group">
-            <input type="submit" class="button" value="Sign Up">
-          </div>
-          <div class="hr"></div>
-          <div class="foot-lnk">
-            <label for="tab-1">Already Member?</a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+</section>
 
 </body>
 

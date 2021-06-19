@@ -2,6 +2,11 @@ const crypto = require('crypto');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
 const bodyParser = require('body-parser');
+const { join } = require('path');
+// const { test2 } = require('../public/js/argiculture');
+// const argi = require('../public/js/argiculture');
+
+// import argiculture from "js/argiculture.js"
 
 // const { web3 } = window
 // const selectedAddress = web3.eth.defaultAccount
@@ -45,16 +50,16 @@ module.exports = function (app) {
     if (!req.session.name)
       return res.redirect('/login');
     else
-      res.render('doctor', { name: req.session.name });
+      res.render('customer', { name: req.session.name });
   });
   app.get('/main2', function (req, res) {
     if (!req.session.name)
       return res.redirect('/login');
     else
-      res.render('customer', { name: req.session.name });
+      res.render('doctor', { name: req.session.name });
   });
   app.get('/about', function (req, res) {
-    res.render('about.html');
+    res.render('about.html',{ name: req.session.name });
   });
   app.get('/contact', function (req, res) {
     res.render('contact.html');
@@ -75,12 +80,33 @@ module.exports = function (app) {
   //   let prohospital = req.body.prohospital;
 
   //   contract.addProStru(howMany, productName, whereIs, function(err, result) {
-	// 		if (err)
-	// 			return showError("Smart contract call failed: " + err);
-	// 		showInfo(`Document ${result} <b>successfully added</b> to the registry.`);
-	// 	}); 
+   //       if (err)
+   //          return showError("Smart contract call failed: " + err);
+   //       showInfo(`Document ${result} <b>successfully added</b> to the registry.`);
+   //    }); 
   // });
 
+  // document.write("<script type='text/javascript' src='js/argiculture.js'><"+"/script>");
+
+  app.post('/main', function(req, res) { 
+    let id = req.body.addr;
+    req.session.name = id;
+    console.log("환자 버튼");
+    console.log(id);
+    req.session.save(function () {
+      return res.redirect('/main');
+    }); 
+  });
+
+  app.post('/main2', function(req, res) { 
+    let id = req.body.addr;
+    req.session.name = id;
+    console.log("의사 버튼");
+    console.log(id);
+    req.session.save(function () {
+      return res.redirect('/main2');
+    }); 
+  });
 
   app.post('/login', function (req, res) {
     let id = req.body.username;
@@ -89,17 +115,17 @@ module.exports = function (app) {
     let salt = '';
     let pw = '';
 
-		// if (window.ethereum)
-		// 	try {
-		// 		await window.ethereum.enable();
-		// 	} catch (err) {
+      // if (window.ethereum)
+      //    try {
+      //       await window.ethereum.enable();
+      //    } catch (err) {
     //             return showError("Access to your Ethereum account rejected.");
-		// 	}
-		// if (typeof web3 === 'undefined')
+      //    }
+      // if (typeof web3 === 'undefined')
     //             return showError("Please install MetaMask to access the Ethereum Web3 injected API from your Web browser.");
-			
-		// let account = selectedAddress 
-		// console.log("my account " , account);
+         
+      // let account = selectedAddress 
+      // console.log("my account " , account);
 
     crypto.randomBytes(64, (err, buf) => {
       if (err) throw err;
