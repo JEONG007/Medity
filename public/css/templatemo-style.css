@@ -25,6 +25,15 @@ https://templatemo.com/tm-532-next-level
 
 /*내맘대로*/
 .left_padding { padding-left: 40px; padding-right: 40px;}
+#iceCoffee, #hotCoffee, #minCho, #earlGrey, #bananaCream, #milkTea{
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent;
+  border: none;
+
+  color: #FFFFFF;
+}
+
 .tm-page-col-login {
   width: 40%;
   margin-left: auto;
@@ -36,7 +45,7 @@ https://templatemo.com/tm-532-next-level
   margin-right: auto;
 }
 .tm-text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 /*	Overrides */

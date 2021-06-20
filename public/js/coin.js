@@ -323,7 +323,7 @@ $(document).ready(function() {
        if (err)
           return showError("Smart contract call failed: " + err);
       console.log(result);
-      document.getElementById('balance').innerText = result/1000000000000000000;
+      document.getElementById('balance').innerText = result;
 
      });
     $('#iceCoffee').click(function() {Transfer("iceCoffee")});
@@ -349,7 +349,11 @@ $(document).ready(function() {
         if (err)
            return showError("Smart contract call failed: " + err);
           
-        showInfo(`Document ${result} <b>successfully added</b> to the transfer.`);
         });
     }
+    async function transferFrom(){
+
+        //transferFrom(address _from, address _to, uint256 _value) returns (bool success) {}
+    }
+    
 })
