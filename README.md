@@ -7,24 +7,24 @@
 - Solidity
 ## 기능 설명
 ### 1. 공통 : 회원 가입 및 로그인
-<img src="Sign.PNG">
+<img src="Sign.png">
 
 ### 2.1 회원 : QR 코드
-<img src="cus_qrcode.PNG">
+<img src="cus_qrcode.png">
 
 ### 2.2 회원 : 진료 기록 조회
-<img src="cus_records.PNG">
+<img src="cus_records.png">
 
 ### 3.1 의사 : 환자 진료 기록 조회
-<img src="doc_records.PNG">
+<img src="doc_records.png">
 
 ### 3.2 의사 : 환자 진료 기록 업로드
-<img src="doc_upload.PNG">
+<img src="doc_upload.png">
 
 ### 4. 공통 : 리워드 상점
-<img src="doc_rewards.PNG">
+<img src="doc_rewards.png">
 
 ## 특이 사항
-실행시키는 서버에 따라 QR코드가 안나오기도 함
+실행시키는 서버에 따라 QR코드가 안나오기도 함  
 많은 사람들이 사용하는 요인으로써 리워드 개념을 적용하려 하였으나, 아직 반영하지 못함. 따라서 리워드가 적립되지 않음
 
